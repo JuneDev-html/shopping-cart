@@ -1,35 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import './App.scss';
+import { About } from './pages/about/About';
+import { Menu } from './pages/manu/menu';
+import { Cart } from './pages/cart/Cart';
+import { Home } from './pages/home/Home';
+import { Navbar } from './pages/navbar/Navbar';
+import logo from './assets/logo.png';
+import youtube from './assets/youtube.svg';
+import tiktok from './assets/tiktok.svg';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='app'>
+      <Navbar />
+      <div className='pages'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/menu' element={<Menu />} />
+          <Route path='/cart' element={<Cart />} />
+        </Routes>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      <footer>
+        <p>&#60;June /&#62;</p>
+        <a className='logos' href='https://github.com/JuneDev-html'>
+          <img className='logo' width={18} src={logo} />
+        </a>
+        <a
+          className='logos'
+          href='https://www.youtube.com/channel/UC8ryMqGJPToOXdwj4IqwE-Q'
+        >
+          <img className='logo' width={20} src={youtube} />
+        </a>
+        <a className='logos' href='https://www.tiktok.com/@june.dasilva'>
+          <img className='logo' width={18} src={tiktok} />
+        </a>
+      </footer>
+    </div>
+  );
 }
 
-export default App
+export default App;

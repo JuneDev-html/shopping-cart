@@ -1,0 +1,57 @@
+@import './styles/navbar.scss';
+@import './styles/home';
+
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#root {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navbar {
+  height: 30px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pages {
+  flex: 1;
+}
+
+footer {
+  height: 50px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding-bottom: 5px;
+  }
+
+  .logos {
+    margin-left: 10px;
+    transition: 0.1s;
+
+    &:hover {
+      scale: 1.15;
+      transition: 0.3s;
+    }
+  }
+}

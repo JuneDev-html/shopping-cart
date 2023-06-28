@@ -1,0 +1,103 @@
+#home {
+  height: 100%;
+}
+
+.hero-wrap {
+  // border: 2px solid red;
+  height: 300px;
+  width: 100%;
+  background: no-repeat url(/src/assets/espresso-hero.webp);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.hero {
+  background: linear-gradient(110deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.title-wrap {
+  flex: 1;
+  padding: 3% 0;
+  border-top: 1px solid rgba(245, 245, 245, 0.8);
+  border-bottom: 1px solid rgba(245, 245, 245, 0.8);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  p {
+    color: rgba(245, 245, 245, 0.9);
+    font-weight: 600;
+    font-size: 40px;
+    margin-left: 10%;
+    letter-spacing: 2px;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  transition: 0.5s;
+}
+
+.albanian-welcome {
+  font-family: 'Luxurious Script', cursive;
+  font-size: 70px;
+  color: tan;
+  margin-bottom: -15px;
+  transition: 1s;
+}
+
+.english-welcome {
+  margin-top: -20px;
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: -4px;
+  text-align: center;
+}
+
+.short-border {
+  margin: 40px 0;
+  width: 200px;
+  height: 5px;
+  background-color: tan;
+  border: none;
+}
+
+.blurb {
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.menu-btn {
+  margin-top: 50px;
+  border: 2px solid black;
+  font-size: 22px;
+  padding: 12px 30px;
+  background-color: transparent;
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    scale: 0.9;
+    transition: 0.3s;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .albanian-welcome {
+    font-size: 60px;
+    margin-bottom: -5px;
+  }
+  .english-welcome {
+    font-size: 30px;
+  }
+}
