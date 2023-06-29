@@ -1,0 +1,42 @@
+.about-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.image {
+  flex: 1;
+  background: no-repeat url(/src/assets/about-img.jpeg);
+  background-size: 1600px 1000px;
+  background-position: center;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.haze {
+  background: rgba(255, 255, 255, 0.171);
+  backdrop-filter: blur(5px);
+  height: 100%;
+  width: max(45%, 500px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  div {
+    color: #fff;
+    margin: 20px;
+  }
+}
+
+.about-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.aboutme {
+  padding: 90px;
+  font-size: 20px;
+}

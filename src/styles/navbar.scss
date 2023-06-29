@@ -1,3 +1,10 @@
+.page-nav {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  // margin-right: 30%;
+}
+
 .nav-link {
   text-decoration: none;
   color: #000;
@@ -10,5 +17,17 @@
     cursor: pointer;
     content: '';
     height: 21px;
+  }
+}
+
+#bag-wrap {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+
+  &:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition: 0.2s;
   }
 }

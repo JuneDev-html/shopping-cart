@@ -1,3 +1,6 @@
+import '../../styles/home.scss';
+import { Link } from 'react-router-dom';
+
 export const Home = () => {
   return (
     <div id='home'>
@@ -13,7 +16,11 @@ export const Home = () => {
         <div className='english-welcome'>WELCOME TO ESPRESS YOURESELF</div>
         <hr className='short-border' />
         <div className='blurb'>Goiânia's home of european coffee</div>
-        <button className='menu-btn'>MENU</button>
+        <button className='menu-btn'>
+          <Link id='menu-link' to='/menu'>
+            MENU
+          </Link>
+        </button>
       </main>
     </div>
   );
