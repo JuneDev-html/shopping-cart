@@ -9,16 +9,18 @@ import { Navbar } from './pages/navbar/Navbar';
 import logo from './assets/logo.png';
 import youtube from './assets/youtube.svg';
 import tiktok from './assets/tiktok.svg';
+import { menu } from './environment/menu';
 
 function App() {
+  const [menu2, setMenu] = React.useState(menu);
   const [isCartActive, setIsCartActive] = React.useState(true);
   const [cart, setCart] = React.useState([
     {
-      item: 'espresso',
+      item: menu2.drinks[2],
       quantity: 1,
     },
     {
-      item: 'croissant',
+      item: menu2.food[1],
       quantity: 2,
     },
   ]);
@@ -36,7 +38,7 @@ function App() {
       ></div>
       <div className='pages'>
         <div className={isCartActive ? 'cart-overlay active' : 'cart-overlay'}>
-          <Cart toggleCart={toggleCart} />
+          <Cart cart={cart} toggleCart={toggleCart} />
         </div>
         <Routes>
           <Route path='/' element={<Home />} />

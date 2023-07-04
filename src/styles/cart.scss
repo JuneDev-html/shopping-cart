@@ -34,16 +34,18 @@ header {
   justify-content: center;
   align-items: center;
   height: 90px;
+  margin: 10px 0;
 
   img {
-    border: 2px dashed blue;
+    // border: 2px dashed blue;
     height: 90px;
     width: 90px;
   }
 
   .item-description {
+    padding-left: 10px;
     flex: 1;
-    border: 2px solid black;
+    // border: 2px solid black;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -80,6 +82,11 @@ header {
   .increment,
   .decrement {
     font-size: 30px;
+    font-weight: 600;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .decrement {
@@ -97,7 +104,7 @@ header {
   }
 
   .item-total {
-    border: 2px solid blue;
+    // border: 2px solid blue;
     height: 100%;
     width: 50px;
     display: flex;

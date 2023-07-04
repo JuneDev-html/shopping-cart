@@ -1,49 +1,40 @@
 export const menu = {
   drinks: [
+    // {
+    //   item: 'drink',
+    //   pricing: 'pricing',
+    // },
     {
-      item: 'drink',
-      size: {
-        single: 'sml',
-        double: 'dbl',
-        triple: 'trpl',
-      },
+      name: 'espresso',
+      description: 'italian roast',
+      pricing: 2.08,
     },
     {
-      item: 'espresso',
-      size: {
-        single: 2.08,
-        double: 2.56,
-        triple: 3.08,
-      },
+      name: 'macchiato',
+      description: 'italian roast, dollop of foam',
+      pricing: Number.parseFloat(3.2).toFixed(2),
     },
     {
-      item: 'macchiato',
-      size: {
-        single: Number.parseFloat(3.2).toFixed(2),
-        double: 2.95,
-        triple: 3.45,
-      },
-    },
-    {
-      item: 'latte',
-      size: {
-        single: Number.parseFloat(2.6).toFixed(2),
-        double: Number.parseFloat(3.2).toFixed(2),
-        triple: 3.95,
-      },
+      name: 'latte',
+      description: 'espresso, steamed milk, layer of frothed milk',
+      pricing: Number.parseFloat(2.6).toFixed(2),
     },
   ],
   food: [
     {
-      item: 'croissant',
+      name: 'croissant',
+      description: 'fresh baked',
       pricing: Number.parseFloat(2.5).toFixed(2),
     },
     {
-      item: 'spinach pie',
+      name: 'pie',
+      description:
+        'spinach pie - spinach, feta cheese, seasonings baked in phyllo',
       pricing: 2.99,
     },
     {
-      item: 'sandwich',
+      name: 'sandwich',
+      description: 'croissant, ham, lettuce, tomato',
       pricing: 4.99,
     },
   ],

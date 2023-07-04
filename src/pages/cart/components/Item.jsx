@@ -1,13 +1,11 @@
 import React from 'react';
 
-export const Item = () => {
-  const [itemCount, setItemCount] = React.useState(0);
+export const Item = ({ item }) => {
+  const [itemCount, setItemCount] = React.useState(item.quantity);
 
   const incrementCount = () => {
     setItemCount(itemCount + 1);
   };
-
-  console.log(itemCount);
 
   const decrementCount = () => {
     setItemCount(itemCount - 1);
@@ -15,10 +13,14 @@ export const Item = () => {
 
   return (
     <div className='items-wrap'>
-      <img className='item-image' src='' alt='' />
+      <img
+        className='item-image'
+        src={`/public/${item.item.name}.png`}
+        alt=''
+      />
       <div className='item-description'>
-        <div className='item-info name'>espresso</div>
-        <div className='item-info details'>single - italian</div>
+        <div className='item-info name'>{item.item.name}</div>
+        <div className='item-info details'>{item.item.description}</div>
         <div className='item-info quantity'>
           <div className='decrement' onClick={decrementCount}>
             -
@@ -31,7 +33,9 @@ export const Item = () => {
           </div>
         </div>
       </div>
-      <div className='item-total'>$8.52</div>
+      <div className='item-total'>
+        ${Number.parseFloat(`${item.item.pricing}` * itemCount).toFixed(2)}
+      </div>
     </div>
   );
 };
