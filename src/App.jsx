@@ -14,18 +14,7 @@ import { menu } from './environment/menu';
 function App() {
   const [menu2, setMenu] = React.useState(menu);
   const [isCartActive, setIsCartActive] = React.useState(true);
-  const [cart, setCart] = React.useState([
-    {
-      name: 'espresso',
-      info: menu2.drinks[0],
-      quantity: 1,
-    },
-    {
-      name: 'pie',
-      info: menu2.food[1],
-      quantity: 2,
-    },
-  ]);
+  const [cart, setCart] = React.useState([]);
 
   const addToCart = (name, group) => {
     const found = cart.find((item) => item.name === name);

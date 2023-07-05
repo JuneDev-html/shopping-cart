@@ -15,7 +15,7 @@ export const Item = ({ item, addToCart, group }) => {
       onClick={() => addToCart(item.name, group)}
     >
       <div className='item'>
-        {hovering && <div className='addToCart'>+ </div>}
+        {hovering && <div className='addToCart'>+</div>}
         {item.name}
       </div>
       <div className='spacer'></div>
