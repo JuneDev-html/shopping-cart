@@ -1,9 +1,9 @@
 {
   "name": "shopping-cart",
+  "homepage": "https://junedev-html.github.io/shopping-cart/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://junedev-html.github.io/shopping-cart/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

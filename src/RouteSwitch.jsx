@@ -4,7 +4,7 @@ import App from './App';
 
 export const RouteSwitch = () => {
   return (
-    <HashRouter>
+    <HashRouter basename='/shopping-cart'>
       <App />
     </HashRouter>
   );
