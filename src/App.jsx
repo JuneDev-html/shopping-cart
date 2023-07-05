@@ -16,19 +16,74 @@ function App() {
   const [isCartActive, setIsCartActive] = React.useState(true);
   const [cart, setCart] = React.useState([
     {
-      item: menu2.drinks[2],
+      name: 'espresso',
+      info: menu2.drinks[0],
       quantity: 1,
     },
     {
-      item: menu2.food[1],
+      name: 'croissant',
+      info: menu2.food[1],
       quantity: 2,
     },
   ]);
+
+  const addToCart = (name, group) => {
+    const found = cart.find((item) => item.name === name);
+
+    if (found) {
+      console.log('quantity incremented');
+      incrementCount(name);
+    } else {
+      const newItem = menu2[group].find((item) => item.name === name);
+
+      console.log('New item added');
+      setCart((oldCart) => {
+        return [
+          ...oldCart,
+          {
+            name: name,
+            info: newItem,
+            quantity: 1,
+          },
+        ];
+      });
+    }
+    toggleCart();
+  };
+
+  const incrementCount = (name) => {
+    setCart((oldCart) =>
+      oldCart.map((oldItem) => {
+        return oldItem.name === name
+          ? { ...oldItem, quantity: oldItem.quantity + 1 }
+          : oldItem;
+      })
+    );
+  };
+
+  const decrementCount = (name) => {
+    const clickedItem = cart.find((item) => item.name === name);
+    if (clickedItem.quantity <= 1) {
+      alert('remove item?');
+    } else {
+      console.log('quantity decremented');
+      setCart((oldCart) =>
+        oldCart.map((oldItem) => {
+          return oldItem.name === name
+            ? { ...oldItem, quantity: oldItem.quantity - 1 }
+            : oldItem;
+        })
+      );
+    }
+  };
 
   const toggleCart = () => {
     setIsCartActive(!isCartActive);
   };
 
+  const clearCart = () => {
+    setCart([]);
+  };
   return (
     <div className='app'>
       <Navbar toggleCart={toggleCart} />
@@ -38,12 +93,18 @@ function App() {
       ></div>
       <div className='pages'>
         <div className={isCartActive ? 'cart-overlay active' : 'cart-overlay'}>
-          <Cart cart={cart} toggleCart={toggleCart} />
+          <Cart
+            cart={cart}
+            incrementCount={incrementCount}
+            decrementCount={decrementCount}
+            toggleCart={toggleCart}
+            clearCart={clearCart}
+          />
         </div>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/menu' element={<Menu />} />
+          <Route path='/menu' element={<Menu addToCart={addToCart} />} />
         </Routes>
       </div>
       <footer>

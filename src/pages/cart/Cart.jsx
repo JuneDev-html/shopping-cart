@@ -2,8 +2,33 @@ import closeBtn from '../../assets/close.svg';
 import '../../styles/cart.scss';
 import { Item } from './components/Item';
 
-export const Cart = ({ cart, toggleCart }) => {
-  const items = cart.map((item, id) => <Item key={id} item={item} />);
+export const Cart = ({
+  cart,
+  toggleCart,
+  incrementCount,
+  decrementCount,
+  clearCart,
+}) => {
+  const items = cart.map((item, id) => (
+    <Item
+      key={id}
+      item={item}
+      incrementCount={incrementCount}
+      decrementCount={decrementCount}
+    />
+  ));
+
+  const subtotal = cart.reduce((total, item) => {
+    const itemTotal = item.info.pricing * item.quantity;
+    return total + itemTotal;
+  }, 0);
+
+  const placeOrder = () => {
+    alert('Thank you for shopping with us <3');
+    clearCart();
+    toggleCart();
+  };
+
   return (
     <div>
       <header>
@@ -21,8 +46,13 @@ export const Cart = ({ cart, toggleCart }) => {
           <h1 className='bag-title'>Bag</h1>
         </div>
         {items}
-        <div className='order-total'></div>
-        <div className='checkout-wrap'></div>
+        <div className='subtotal-wrap'>
+          <p className='total-name'>Subtotal:</p>
+          <p className='order-total'>${subtotal}</p>
+        </div>
+        <button className='button' onClick={placeOrder}>
+          Place Order
+        </button>
       </section>
     </div>
   );

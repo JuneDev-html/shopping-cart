@@ -2,7 +2,6 @@
   flex: 1;
   display: flex;
   justify-content: space-evenly;
-  // margin-right: 30%;
 }
 
 .nav-link {
@@ -22,8 +21,9 @@
 
 #bag-wrap {
   display: flex;
-  justify-content: center;
+
   margin-right: 20px;
+  padding-bottom: 5px;
 
   &:hover {
     cursor: pointer;

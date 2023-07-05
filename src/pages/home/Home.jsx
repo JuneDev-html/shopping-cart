@@ -16,7 +16,7 @@ export const Home = () => {
         <div className='english-welcome'>WELCOME TO ESPRESS YOURESELF</div>
         <hr className='short-border' />
         <div className='blurb'>Goiânia's home of european coffee</div>
-        <button className='menu-btn'>
+        <button className='button'>
           <Link id='menu-link' to='/menu'>
             MENU
           </Link>

@@ -46,24 +46,34 @@
     width: 320px;
   }
 
-  .item-block {
+  .item-line {
     flex: 1;
     display: flex;
     width: 100%;
     justify-content: bottom;
     align-items: end;
-  }
 
-  .item-block div {
-    margin: 10px 5px;
-    flex: 1;
+    > div {
+      margin: 10px 5px;
+      flex: 1;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .item {
-    text-align: end;
     font-weight: 600;
     font-size: 15px;
     height: 13px;
+    display: flex;
+    justify-content: flex-end;
+
+    .addToCart {
+      margin-right: 3px;
+      font-size: 17px;
+    }
   }
 
   .spacer {

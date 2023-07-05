@@ -29,7 +29,6 @@ header {
 }
 
 .items-wrap {
-  // border: 2px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +36,6 @@ header {
   margin: 10px 0;
 
   img {
-    // border: 2px dashed blue;
     height: 90px;
     width: 90px;
   }
@@ -45,14 +43,12 @@ header {
   .item-description {
     padding-left: 10px;
     flex: 1;
-    // border: 2px solid black;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     .item-info {
-      // border: 2px solid red;
       height: 20px;
       display: flex;
       justify-content: flex-start;
@@ -69,12 +65,10 @@ header {
       }
 
       &.quantity {
-        // border: 2px solid black;
         width: 80px;
         height: 30px;
         display: flex;
         justify-content: center;
-        // align-items: center;
       }
     }
   }
@@ -104,12 +98,27 @@ header {
   }
 
   .item-total {
-    // border: 2px solid blue;
     height: 100%;
     width: 50px;
     display: flex;
     justify-content: center;
     font-size: 14px;
     font-weight: 600;
+  }
+}
+
+.subtotal-wrap {
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  p {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .order-total {
+    margin-left: 10px;
   }
 }

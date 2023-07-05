@@ -34,7 +34,7 @@ export const menu = {
     },
     {
       name: 'sandwich',
-      description: 'croissant, ham, lettuce, tomato',
+      description: 'croissant, egg, bacon, tomato, spices',
       pricing: 4.99,
     },
   ],
