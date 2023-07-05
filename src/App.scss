@@ -15,7 +15,7 @@ body {
   flex-direction: column;
   height: 100%;
   position: relative;
-  overflow: hidden;
+  overflow-y: scroll;
 }
 
 .navbar {
@@ -87,5 +87,12 @@ footer {
     pointer-events: all;
     transition: 0.3s ease-in-out;
     backdrop-filter: blur(3px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cart-overlay {
+    width: 100%;
+    right: -110%;
   }
 }

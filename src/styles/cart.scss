@@ -33,7 +33,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 90px;
-  margin: 10px 0;
+  margin: 15px 0;
 
   img {
     height: 90px;
@@ -120,5 +120,20 @@ header {
 
   .order-total {
     margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cart-body {
+    padding: 10px;
+  }
+
+  .items-wrap {
+    height: 140px;
+
+    img {
+      height: 140px;
+      width: 140px;
+    }
   }
 }

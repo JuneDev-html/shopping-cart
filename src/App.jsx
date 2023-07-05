@@ -21,7 +21,7 @@ function App() {
       quantity: 1,
     },
     {
-      name: 'croissant',
+      name: 'pie',
       info: menu2.food[1],
       quantity: 2,
     },
@@ -109,7 +109,10 @@ function App() {
       </div>
       <footer>
         <p>&#60;June /&#62;</p>
-        <a className='logos' href='https://github.com/JuneDev-html'>
+        <a
+          className='logos'
+          href='https://github.com/JuneDev-html/shopping-cart'
+        >
           <img className='logo' width={18} src={logo} />
         </a>
         <a
