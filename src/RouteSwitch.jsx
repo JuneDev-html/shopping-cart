@@ -4,7 +4,7 @@ import App from './App';
 
 export const RouteSwitch = () => {
   return (
-    <HashRouter basename='/shopping-cart'>
+    <HashRouter basename={import.meta.env.DEV ? '/' : '/shopping-cart/'}>
       <App />
     </HashRouter>
   );
