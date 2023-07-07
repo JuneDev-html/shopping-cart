@@ -20,7 +20,7 @@ export const Cart = ({
 
   const subtotal = cart.reduce((total, item) => {
     const itemTotal = item.info.pricing * item.quantity;
-    return total + itemTotal;
+    return Number.parseFloat(total + itemTotal).toFixed(2);
   }, 0);
 
   const placeOrder = () => {

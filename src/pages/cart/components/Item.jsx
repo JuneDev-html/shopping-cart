@@ -1,11 +1,16 @@
 import React from 'react';
 
 export const Item = ({ item, incrementCount, decrementCount }) => {
+  const subtotal = Number.parseFloat(item.info.pricing * item.quantity).toFixed(
+    2
+  );
+
+  console.log(subtotal);
   return (
     <div className='items-wrap'>
       <img
         className='item-image'
-        src={`/public/${item.name}.png`}
+        src={`/src/assets/${item.name}.png`}
         alt={item.name}
       />
       <div className='item-description'>
@@ -23,9 +28,7 @@ export const Item = ({ item, incrementCount, decrementCount }) => {
           </div>
         </div>
       </div>
-      <div className='item-total'>
-        ${Number.parseFloat(`${item.info.pricing}` * item.quantity).toFixed(2)}
-      </div>
+      <div className='item-total'>${subtotal}</div>
     </div>
   );
 };
