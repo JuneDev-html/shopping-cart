@@ -19,8 +19,8 @@ export const Cart = ({
   ));
 
   const subtotal = cart.reduce((total, item) => {
-    const itemTotal = item.info.pricing * item.quantity;
-    return Number.parseFloat(total + itemTotal).toFixed(2);
+    let itemTotal = item.info.pricing * item.quantity;
+    return total + itemTotal;
   }, 0);
 
   const placeOrder = () => {
@@ -48,7 +48,9 @@ export const Cart = ({
         {items}
         <div className='subtotal-wrap'>
           <p className='total-name'>Subtotal:</p>
-          <p className='order-total'>${subtotal}</p>
+          <p className='order-total'>
+            ${Number.parseFloat(subtotal).toFixed(2)}
+          </p>
         </div>
         <button className='button' onClick={placeOrder}>
           Place Order
