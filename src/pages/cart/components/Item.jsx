@@ -10,14 +10,14 @@ export const Item = ({ item, incrementCount, decrementCount }) => {
   const subtotal = Number.parseFloat(item.info.pricing * item.quantity).toFixed(
     2
   );
-  const [images, setImages] = React.useState({
+  const images = {
     espresso,
     macchiato,
     latte,
     croissant,
     pie,
     sandwich,
-  });
+  };
 
   return (
     <div className='items-wrap'>
