@@ -2,8 +2,8 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.scss';
 import { About } from './pages/about/About';
-import { Menu } from './pages/menu/Menu';
 import { Cart } from './pages/cart/Cart';
+import { Menu } from './pages/menu/Menu';
 import { Home } from './pages/home/Home';
 import { Navbar } from './pages/navbar/Navbar';
 import logo from './assets/logo.png';
@@ -51,7 +51,8 @@ function App() {
   const decrementCount = (name) => {
     const clickedItem = cart.find((item) => item.name === name);
     if (clickedItem.quantity <= 1) {
-      alert('remove item?');
+      const confirmRemove = confirm('Remove Item?');
+      confirmRemove ? removeItem(name) : '';
     } else {
       setCart((oldCart) =>
         oldCart.map((oldItem) => {
@@ -61,6 +62,11 @@ function App() {
         })
       );
     }
+  };
+
+  const removeItem = (name) => {
+    const filteredCart = cart.filter((item) => item.name !== name);
+    setCart(filteredCart);
   };
 
   const toggleCart = () => {
