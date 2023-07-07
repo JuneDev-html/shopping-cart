@@ -1,9 +1,5 @@
 export const menu = {
   drinks: [
-    // {
-    //   item: 'drink',
-    //   pricing: 'pricing',
-    // },
     {
       name: 'espresso',
       description: 'italian roast',
