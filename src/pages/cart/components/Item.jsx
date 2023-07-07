@@ -10,14 +10,18 @@ export const Item = ({ item, incrementCount, decrementCount }) => {
   const subtotal = Number.parseFloat(item.info.pricing * item.quantity).toFixed(
     2
   );
+  const [images, setImages] = React.useState({
+    espresso,
+    macchiato,
+    latte,
+    croissant,
+    pie,
+    sandwich,
+  });
 
   return (
     <div className='items-wrap'>
-      <img
-        className='item-image'
-        src={`/src/assets/${item.name}.png`}
-        alt={item.name}
-      />
+      <img className='item-image' src={images[item.name]} alt={item.name} />
       <div className='item-description'>
         <div className='item-info name'>{item.name}</div>
         <div className='item-info details'>{item.info.description}</div>
