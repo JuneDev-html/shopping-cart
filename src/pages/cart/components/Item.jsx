@@ -1,11 +1,16 @@
 import React from 'react';
+import espresso from '/src/assets/espresso.png';
+import macchiato from '/src/assets/macchiato.png';
+import latte from '/src/assets/latte.png';
+import croissant from '/src/assets/croissant.png';
+import pie from '/src/assets/pie.png';
+import sandwich from '/src/assets/sandwich.png';
 
 export const Item = ({ item, incrementCount, decrementCount }) => {
   const subtotal = Number.parseFloat(item.info.pricing * item.quantity).toFixed(
     2
   );
 
-  console.log(subtotal);
   return (
     <div className='items-wrap'>
       <img
