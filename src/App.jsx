@@ -13,7 +13,7 @@ import { menu } from './environment/menu';
 
 function App() {
   const [menu2, setMenu] = React.useState(menu);
-  const [isCartActive, setIsCartActive] = React.useState(true);
+  const [isCartActive, setIsCartActive] = React.useState(false);
   const [cart, setCart] = React.useState([]);
 
   const addToCart = (name, group) => {
