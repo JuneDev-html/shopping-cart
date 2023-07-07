@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.scss';
 import { About } from './pages/about/About';
-import { Menu } from './pages/menu/menu';
+import { Menu } from './pages/menu/Menu';
 import { Cart } from './pages/cart/Cart';
 import { Home } from './pages/home/Home';
 import { Navbar } from './pages/navbar/Navbar';
@@ -20,12 +20,10 @@ function App() {
     const found = cart.find((item) => item.name === name);
 
     if (found) {
-      console.log('quantity incremented');
       incrementCount(name);
     } else {
       const newItem = menu2[group].find((item) => item.name === name);
 
-      console.log('New item added');
       setCart((oldCart) => {
         return [
           ...oldCart,
@@ -55,7 +53,6 @@ function App() {
     if (clickedItem.quantity <= 1) {
       alert('remove item?');
     } else {
-      console.log('quantity decremented');
       setCart((oldCart) =>
         oldCart.map((oldItem) => {
           return oldItem.name === name
@@ -73,6 +70,7 @@ function App() {
   const clearCart = () => {
     setCart([]);
   };
+
   return (
     <div className='app'>
       <Navbar toggleCart={toggleCart} />
