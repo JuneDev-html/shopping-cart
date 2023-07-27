@@ -2,7 +2,5 @@
 
 live: https://junedasilva.github.io/shopping-cart/
 
-Built with React and React-router
-
-A simple website using React router to navigate its pages.
-It simulates a store with a shopping cart.
+This app is a project from The Odin Project curriculum.
+The goal is to practice using react and react router.
