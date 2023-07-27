@@ -104,7 +104,7 @@ function App() {
         <p>&#60;June /&#62;</p>
         <a
           className='logos'
-          href='https://github.com/JuneDev-html/shopping-cart'
+          href='https://github.com/JuneDaSilva/shopping-cart'
         >
           <img className='logo' width={18} src={logo} />
         </a>
