@@ -20,7 +20,7 @@ export const Item = ({ item, incrementCount, decrementCount }) => {
   };
 
   return (
-    <div className='items-wrap'>
+    <div className='item-wrap'>
       <img className='item-image' src={images[item.name]} alt={item.name} />
       <div className='item-description'>
         <div className='item-info name'>{item.name}</div>

@@ -30,7 +30,7 @@ export const Cart = ({
   };
 
   return (
-    <div>
+    <div className='cart-window'>
       <header>
         <img
           width={25}
@@ -45,14 +45,14 @@ export const Cart = ({
           <h1 className='bag-title'>Shopping</h1>
           <h1 className='bag-title'>Bag</h1>
         </div>
-        {items}
+        <div className='items-wrap'>{items}</div>
         <div className='subtotal-wrap'>
           <p className='total-name'>Subtotal:</p>
           <p className='order-total'>
             ${Number.parseFloat(subtotal).toFixed(2)}
           </p>
         </div>
-        <button className='button' onClick={placeOrder}>
+        <button className='button place-order' onClick={placeOrder}>
           Place Order
         </button>
       </section>
